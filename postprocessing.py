@@ -4,10 +4,10 @@ from feedgen.feed import FeedGenerator
 from datetime import datetime, timezone
 
 # Normal GitHub Pages URL
-# ghPagesURL = "https://axelp23.github.io/tiktok-rss-flat/"
+# ghPagesURL = "https://github.com/axelp23/tiktok-rss-flat"
 
 # Custom Domain
-ghPagesURL = "https://tiktokrss.conoroneill.com/"
+ghPagesURL = "https://github.com/axelp23/tiktok-rss-flat"
 
 api = TikTokApi.get_instance()
 
@@ -25,7 +25,7 @@ with open('subscriptions.csv') as f:
         fg = FeedGenerator()
         fg.id('https://www.tiktok.com/@' + user)
         fg.title(user + ' TikTok')
-        fg.author( {'name':'Conor ONeill','email':'conor@conoroneill.com'} )
+ #       fg.author( {'name':'Conor ONeill','email':'conor@conoroneill.com'} )
         fg.link( href='http://tiktok.com', rel='alternate' )
         fg.logo(ghPagesURL + '/tiktok-rss.png')
         fg.subtitle('OK Boomer, all the latest TikToks from ' + user)
